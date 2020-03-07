@@ -3,12 +3,10 @@ import { makeStyles } from "@material-ui/core/styles"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Grid from "@material-ui/core/Grid"
 import Container from "@material-ui/core/Container"
-import GitHubIcon from "@material-ui/icons/GitHub"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import Header from "../components/header"
 import MainFeaturedPost from "../components/mainFeaturedPost"
-import FeaturedPost from "../components/featuredPost"
 import Main from "../components/main"
 import Sidebar from "../components/sideBar"
 import Footer from "../components/footer"
@@ -37,27 +35,6 @@ const mainFeaturedPost = {
   imgText: "compilation of feast light talks",
   linkText: "Join for free.",
 }
-
-const featuredPosts = [
-  {
-    title: "Featured post",
-    date: "Nov 12",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageText: "Image Text",
-  },
-  {
-    title: "Post title",
-    date: "Nov 11",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageText: "Image Text",
-  },
-]
-
-const posts = [featuredPosts[0]]
 
 const sidebar = {
   title: "About",

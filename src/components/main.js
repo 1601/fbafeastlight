@@ -46,7 +46,7 @@ const events = [
   }]
 export default function Main(props) {
   const classes = useStyles()
-  const { posts, title } = props
+  const { title } = props
 
   return (
     <Grid item xs={12} md={8}>
