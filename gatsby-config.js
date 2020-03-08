@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `fbafeastlight`,
+        short_name: `feastlight`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/feastlight-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -35,6 +35,12 @@ module.exports = {
         accessToken: 'NMxfXmmkevz5WPloH8YXuZE-iRTt1k-6lvzGBMJEFzY',
         host: `preview.contentful.com`,
         downloadLocal: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`${__dirname}/src/components/authOverLayer.js`),
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
