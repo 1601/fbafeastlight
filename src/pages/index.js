@@ -29,9 +29,9 @@ const sections = [
 
 const mainFeaturedPost = {
   title: "Make Disciples",
-  description:
-    "BRING PEOPLE. CLOSER TO JESUS.",
-  image: "https://www.fbafeastlight.com/static/creative-4b1a8f84c8e861834bca4f04b5dcbf9e.png",
+  description: "BRING PEOPLE. CLOSER TO JESUS.",
+  image:
+    "https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225-xl.jpg",
   imgText: "compilation of feast light talks",
   linkText: "Join for free.",
 }
@@ -61,8 +61,9 @@ const sidebar = {
 
 const bibleVerses = {
   body: `“‘Come, follow me,’ Jesus said, ‘and I will send you out to fish for people.’ At once they left their nets and followed him.”`,
-  verse: 'Matthew 4:19-20',
-  subtitle: 'God often uses the stories of fisherman in His Word. He wants us to literally “fish for men.” When He asks them to leave their nets, He’s talking about leaving our security, our comfort, and all that we know and follow HIM! For aren’t men more important than “fish?”'
+  verse: "Matthew 4:19-20",
+  subtitle:
+    "God often uses the stories of fisherman in His Word. He wants us to literally “fish for men.” When He asks them to leave their nets, He’s talking about leaving our security, our comfort, and all that we know and follow HIM! For aren’t men more important than “fish?”",
 }
 
 export default function Blog() {
@@ -87,17 +88,33 @@ export default function Blog() {
             alignItems="center"
           >
             <Grid item>
-              <Typography align="center" variant="body1" color="inherit" paragraph>
+              <Typography
+                align="center"
+                variant="body1"
+                color="inherit"
+                paragraph
+              >
                 {bibleVerses.body}
               </Typography>
             </Grid>
             <Grid item>
-              <Typography align="center" variant="caption"  color="error" display="block" paragraph>
+              <Typography
+                align="center"
+                variant="caption"
+                color="error"
+                display="block"
+                paragraph
+              >
                 <i>{bibleVerses.verse}</i>
               </Typography>
             </Grid>
             <Grid item>
-              <Typography align="center" variant="body2" color="inherit" paragraph>
+              <Typography
+                align="center"
+                variant="body2"
+                color="inherit"
+                paragraph
+              >
                 {bibleVerses.subtitle}
               </Typography>
             </Grid>
