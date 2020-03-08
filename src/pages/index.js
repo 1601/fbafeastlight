@@ -22,7 +22,7 @@ const mainFeaturedPost = {
   title: "Make Disciples",
   description:
     "BRING PEOPLE. CLOSER TO JESUS.",
-  image: "https://www.fbafeastlight.com/static/creative-4b1a8f84c8e861834bca4f04b5dcbf9e.png",
+  image: "https://www.reliancedigital.in/wp-content/uploads/2019/02/netflix_movies_cover.jpg",
   imgText: "compilation of feast light talks",
   linkText: "Join for free.",
 }

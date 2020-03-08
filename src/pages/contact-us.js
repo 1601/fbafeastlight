@@ -9,7 +9,7 @@ const mainFeaturedPost = {
   title: "Contact us",
   description:
     "We wanna know what you think.",
-  image: "https://www.fbafeastlight.com/static/creative-4b1a8f84c8e861834bca4f04b5dcbf9e.png",
+  image: "https://media.allure.com/photos/5d935e0dfe76f10009bfd63a/master/pass/therapy.jpg",
   imgText: "compilation of feast light talks",
   linkText: "Join Chat",
 }
