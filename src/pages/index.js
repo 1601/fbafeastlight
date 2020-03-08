@@ -56,9 +56,8 @@ const bibleVerses = {
   subtitle: 'God often uses the stories of fisherman in His Word. He wants us to literally “fish for men.” When He asks them to leave their nets, He’s talking about leaving our security, our comfort, and all that we know and follow HIM! For aren’t men more important than “fish?”'
 }
 
-export default function LandingPage() {
+export default function LandingPage({data}) {
   const classes = useStyles()
-
   return (
     <React.Fragment>
       <CssBaseline />
@@ -94,7 +93,7 @@ export default function LandingPage() {
             </Grid>
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Upcoming Events" />
+            <Main title="Upcoming Events" events={ data.events.nodes } />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
@@ -111,3 +110,16 @@ export default function LandingPage() {
     </React.Fragment>
   )
 }
+
+export const query = graphql`
+  query contentfulEvents {
+    events: allContentfulEvents {
+    nodes {
+      locationTitle
+      date
+      title
+    }
+  }
+}
+
+`
