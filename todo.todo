@@ -1,10 +1,14 @@
 To Do:
 	Project:
         ☐ @high about us page fix content
-        ☐ @high firebase sign in - with requirements
+        ✔ @high firebase sign
         ✔ @high contentful connection @done (3/8/2020, 10:17:12 AM)
 		☐ @medium feast live sched and location
         ☐ @medium feast talks
         ☐ @medium events connection on landing page
+        ☐ @medium private on feast talks /videos
+        ☐ @low all images should be handled with gatsby sharp and from contentful
+        ☐ @low sign in component add header
         ☐ @low messenger (hubspot like chat)
         ☐ @low sign in from sign up
+        ☐ @low design of navigation bar
