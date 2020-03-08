@@ -18,15 +18,6 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const sections = [
-  { title: "Home", url: "#" },
-  { title: "About Us", url: "#" },
-  { title: "Feast Live Schedule & Location", url: "#" },
-  { title: "Feast Talks", url: "#" },
-  { title: "Feast Light Locations", url: "#" },
-  { title: "Contact Us", url: "#" },
-]
-
 const mainFeaturedPost = {
   title: "Make Disciples",
   description:
@@ -65,14 +56,14 @@ const bibleVerses = {
   subtitle: 'God often uses the stories of fisherman in His Word. He wants us to literally “fish for men.” When He asks them to leave their nets, He’s talking about leaving our security, our comfort, and all that we know and follow HIM! For aren’t men more important than “fish?”'
 }
 
-export default function Blog() {
+export default function LandingPage() {
   const classes = useStyles()
 
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="the FEAST Light Bay Area" sections={sections} />
+        <Header title="the FEAST Light Bay Area" />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           {/* <Grid container spacing={4}>

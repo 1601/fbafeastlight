@@ -6,7 +6,8 @@ import Button from "@material-ui/core/Button"
 import IconButton from "@material-ui/core/IconButton"
 import SearchIcon from "@material-ui/icons/Search"
 import Typography from "@material-ui/core/Typography"
-import Link from "@material-ui/core/Link"
+import LinkM from "@material-ui/core/Link"
+import { Link } from 'gatsby'
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -30,9 +31,18 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+const sections = [
+  { title: "Home", url: "/" },
+  { title: "About Us", url: "/about" },
+  { title: "Feast Live Schedule & Location", url: "#" },
+  { title: "Feast Talks", url: "#" },
+  { title: "Feast Light Locations", url: "#" },
+  { title: "Contact Us", url: "/contact-us" },
+]
+
 export default function Header(props) {
   const classes = useStyles()
-  const { sections, title } = props
+  const { title } = props
 
   return (
     <React.Fragment>
@@ -60,15 +70,17 @@ export default function Header(props) {
         className={classes.toolbarSecondary}
       >
         {sections.map(section => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            className={classes.toolbarLink}
-          >
-            {section.title}
+          <Link to={section.url}>
+            <LinkM
+              color="inherit"
+              noWrap
+              key={section.title}
+              variant="body2"
+              href={section.url}
+              className={classes.toolbarLink}
+            >
+              {section.title}
+            </LinkM>
           </Link>
         ))}
       </Toolbar>
