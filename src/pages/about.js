@@ -56,7 +56,7 @@ export default function About() {
               </Typography>
             </Grid>
             <Grid item>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/67sec027cDc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe title="QuickStart" width="560" height="315" src="https://www.youtube-nocookie.com/embed/67sec027cDc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Grid>
           </Grid>
         </main>

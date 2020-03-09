@@ -11,6 +11,7 @@ import Main from "../components/main"
 import Sidebar from "../components/sideBar"
 import Footer from "../components/footer"
 import Typography from "@material-ui/core/Typography"
+import { graphql } from 'gatsby'
 
 const useStyles = makeStyles(theme => ({
   mainGrid: {

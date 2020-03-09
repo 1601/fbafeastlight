@@ -41,9 +41,10 @@
   ],
   "license": "MIT",
   "scripts": {
+    "prestart": "n 11.6.0",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "develop-offline": "GATSBY_CONTENTFUL_OFFLINE=true gatsby develop",
+    "dev": "set GATSBY_CONTENTFUL_OFFLINE=true gatsby clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -56,5 +57,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "engines": {
+    "node": "11.6.0"
   }
 }

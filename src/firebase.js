@@ -1,10 +1,12 @@
-const config = { 
-  apiKey: 'AIzaSyDjS6tGpqjAaC0aXQAGZMkjssABbZzTgSo',
-  authDomain: 'awesome-bb71b.firebaseapp.com',
-  databaseURL: 'https://awesome-bb71b.firebaseio.com',
-  projectId: 'awesome-bb71b',
-  storageBucket: 'awesome-bb71b.appspot.com',
-  messagingSenderId: '646496200074',
+const config = {
+  apiKey: "AIzaSyDnahqAzecK3Cf5KrnbgGk9KVIKFp7nF9c",
+  authDomain: "smtp-fbafeastlight-com.firebaseapp.com",
+  databaseURL: "https://smtp-fbafeastlight-com.firebaseio.com",
+  projectId: "smtp-fbafeastlight-com",
+  storageBucket: "smtp-fbafeastlight-com.appspot.com",
+  messagingSenderId: "56382606382",
+  appId: "1:56382606382:web:a54675572aa2bf815363bf",
+  measurementId: "G-2NBD06ZVK2"
 }
 
 let firebaseCache
