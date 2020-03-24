@@ -8,8 +8,11 @@ To Do:
         ✔ @medium events connection on landing page
         ☐ @medium private on feast talks /videos
         ☐ @low all images should be handled with gatsby sharp and from contentful
-        ☐ @low sign in component add header
+        ✔ @low sign in component add header
         ☐ @low messenger (hubspot like chat)
-        ☐ @low sign in from sign up
+        ✔ @low sign in from sign up
         ☐ @low design of navigation bar
         ☐ @low main.js events handle if there are no events
+        ☐ @low env variables for firebase
+        ☐ @low deploy on zeitco - maybe?
+        ✔ @high apply useHooks / useContext

@@ -12,19 +12,20 @@ class authOverLayer extends Component {
   state = {
     firebase: null,
     authenticated: false,
+    user: null
   }
 
   componentDidMount() {
 
     Promise.all([firebase, auth, database]).then(values => {
       const firebase = getFirebase(values[0])
-      this.setState({ firebase })
+      this.setState({ firebase: [this.state.user, firebase] })
 
       firebase.auth().onAuthStateChanged(user => {
         if (!user) {
-          this.setState({ authenticated: false })
+          this.setState({ authenticated: false, firebase: [user, firebase] })
         } else {
-          this.setState({ authenticated: true })
+          this.setState({ authenticated: true, firebase: [user, firebase] })
         }
       })
     })
@@ -33,15 +34,19 @@ class authOverLayer extends Component {
   render = () => {
     const { firebase, authenticated } = this.state
 
-    if (!firebase) return null
+    if (!firebase) return <>firebase not available</>
     if (this.props.pageContext.layout === "private") {
-        return (
-            <FirebaseContext.Provider value={firebase}>
-                {authenticated ? this.props.children : <SignIn />}
-            </FirebaseContext.Provider>
-            )
+      return (
+          <FirebaseContext.Provider value={firebase}>
+              {authenticated ? this.props.children : <SignIn />}
+          </FirebaseContext.Provider>
+          )
     }
-    return this.props.children
+    return (
+      <FirebaseContext.Provider value={firebase}>
+          {this.props.children}
+      </FirebaseContext.Provider>
+      )
   }
 }
 

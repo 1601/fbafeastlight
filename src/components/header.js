@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext} from "react"
 import PropTypes from "prop-types"
 import { makeStyles } from "@material-ui/core/styles"
 import Toolbar from "@material-ui/core/Toolbar"
@@ -7,7 +7,8 @@ import IconButton from "@material-ui/core/IconButton"
 import SearchIcon from "@material-ui/icons/Search"
 import Typography from "@material-ui/core/Typography"
 import LinkM from "@material-ui/core/Link"
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
+import FirebaseContext from "./FirebaseContext"
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -34,15 +35,27 @@ const useStyles = makeStyles(theme => ({
 const sections = [
   { title: "Home", url: "/" },
   { title: "About Us", url: "/about" },
-  { title: "Feast Live Schedule & Location", url: "#" },
-  { title: "Feast Talks", url: "#" },
-  { title: "Feast Light Locations", url: "#" },
+  { title: "Feast Live Schedule & Location", url: "/feast-live" },
+  { title: "Feast Talks", url: "/feast-talks" },
+  { title: "Feast Light Locations", url: "/feast-light" },
   { title: "Contact Us", url: "/contact-us" },
 ]
 
 export default function Header(props) {
   const classes = useStyles()
   const { title } = props
+  const auth = useContext(FirebaseContext)
+
+  function logout(e) {
+    e.preventDefault()
+    auth[1].auth().signOut()
+  }
+  
+  function login(e) {
+    e.preventDefault()
+    navigate('/about')
+  }
+  
 
   return (
     <React.Fragment>
@@ -60,9 +73,14 @@ export default function Header(props) {
         <IconButton className={classes.hideOnMobile}>
           <SearchIcon />
         </IconButton>
-        <Button variant="outlined" size="small" className={classes.hideOnMobile}>
-          Sign up
-        </Button>
+  {auth[0] ? <Button size="small" className={classes.hideOnMobile}>Hi {auth[0].displayName}, </Button>: <></>}
+        {auth[0] ? 
+          <Button variant="outlined" size="small" className={classes.hideOnMobile} onClick={logout}>
+            Log Out
+          </Button> : 
+          <Button variant="outlined" size="small" className={classes.hideOnMobile} onClick={login}>
+            Log In
+          </Button>}
       </Toolbar>
       <Toolbar
         component="nav"

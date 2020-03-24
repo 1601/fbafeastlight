@@ -36,8 +36,8 @@ const SignIn = ({ firebase }) => (
           </Grid>
           <Grid item>
             <StyledFirebaseAuth
-              uiConfig={getUiConfig(firebase)}
-              firebaseAuth={firebase.auth()}
+              uiConfig={getUiConfig(firebase[1])}
+              firebaseAuth={firebase[1].auth()}
             />
           </Grid>
         </Grid>
